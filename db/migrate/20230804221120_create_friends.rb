@@ -1,11 +1,11 @@
-class CreatePersonalDetails < ActiveRecord::Migration[7.0]
+class CreateFriends < ActiveRecord::Migration[7.0]
   def change
-    create_table :personal_details do |t|
+    create_table :friends do |t|
       t.string :name
-      t.string :email
       t.integer :phone
       t.string :gender
       t.string :description
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

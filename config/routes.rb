@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  resources :personal_details
-  root 'personal_details#index', as: 'details'
+  resources :friends
+  root 'friends#index', as: 'details'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
